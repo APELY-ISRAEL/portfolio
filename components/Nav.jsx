@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import ThemeToggle from '@/components/ui/theme-toggle';
 
 const links = [
   { name: "home", path: "/" },
@@ -15,6 +16,7 @@ const Nav = () => {
 
   return (
     <nav className="flex gap-8">
+     <ThemeToggle />
       {links.map((link, index) => (
         <Link
           href={link.path}

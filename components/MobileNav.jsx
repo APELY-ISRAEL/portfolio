@@ -3,6 +3,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { usePathname } from 'next/navigation';
 import Link from "next/link";
 import { CiMenuFries } from 'react-icons/ci';
+import ThemeToggle from '@/components/ui/theme-toggle';
 
 const links = [
   { name: "home", path: "/" },
@@ -18,18 +19,20 @@ const MobileNav = () => {
   return (
     <Sheet>
       <SheetTrigger className="flex justify-center items-center">
-        <CiMenuFries className="text-[32px] text-blue-600" />
+        <CiMenuFries className="text-[32px] text-slate-100" />
       </SheetTrigger>
       <SheetContent className="flex flex-col">
-        <div className="mt-32 mb-32 text-center text-2xl text-gray-100">
+        <div className="mt-20 mb-20 text-center text-2xl text-gray-100">
           logo
           <Link href="/">
             <h1 className="text-4xl font-semibold">
-              Isra <span className="text-blue-600">.</span>
+              Isra <span className="text-amber-100">.</span>
             </h1>
           </Link>
+          
         </div>
-        <nav className="flex flex-col justify-center items-center gap-8">
+        <nav className="flex flex-col justify-center items-center gap-7">
+           <ThemeToggle />
           {links.map((link, index) => (
             <Link
               href={link.path}

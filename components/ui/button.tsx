@@ -10,11 +10,11 @@ const buttonVariants = cva(
     variants: {
   variant: {
     default:
-      "bg-blue-600 text-white hover:bg-blue-700 active:bg-blue-800 transition-colors duration-300",
+      "bg-blue-600 text-amber-100 hover:bg-blue-700 active:bg-blue-800 transition-colors duration-300",
     primary:
       "bg-white text-black hover:bg-gray-100 active:bg-gray-200 transition-colors duration-300",
     outline:
-      "border border-blue-600 bg-transparent text-blue-600 hover:bg-blue-600 hover:text-white active:bg-blue-700 transition-colors duration-300",
+      "border border-gray-700 bg-transparent text-amber-100 hover:bg-blue-700 hover:text-white active:bg-blue-700 transition-colors duration-300",
   },
 
 

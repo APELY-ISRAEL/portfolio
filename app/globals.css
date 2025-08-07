@@ -4,7 +4,7 @@
 
 @layer base{
   body{
-    @apply font-primary bg-white text-black leading-loose;
+    @apply font-primary bg-slate-900 text-slate-100 leading-loose;
   }
   .h1{
     @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;

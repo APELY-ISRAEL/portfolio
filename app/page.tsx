@@ -1,35 +1,37 @@
 import { Button } from "@/components/ui/button";
-import {FiDownload} from "react-icons/fi";
+import { FiDownload } from "react-icons/fi";
 import Social from "@/components/Social";
 import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
 
 const Home = () => {
   return (
-    <section className="h-full">
+    <section className="h-full bg-slate-900 text-slate-100">
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl">Software Developper</span>
+            <span className="text-xl text-gray-400">Software Developer</span>
             <h1 className="h1 mb-6">
-              Hello I'm <br /> <span className="text-blue-600"> Israel APELY</span>
+              Hello I'm <br /> <span className="text-amber-100">Israel APELY</span>
             </h1>
-            <p className="max-w-[500px] mb-9 text-black/80">I Excel at crafting elegant digital experiences and I am proficient in various 
+            <p className="max-w-[500px] mb-9 text-slate-100">
+              I excel at crafting elegant digital experiences and I am proficient in various 
               programming languages and technologies.
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Button
-              variant="outline"
-              size="lg"
-              className="uppercase flex items-center gap-2"> 
-              <span>Download CV</span>
-              <FiDownload className="text-xl"/>
+                variant="outline"
+                size="lg"
+                className="uppercase flex items-center gap-2 border border-gray-700 hover:bg-blue-700 hover:text-white transition duration-300"
+              > 
+                <span className="text-gray-300">Download CV</span>
+                <FiDownload className="text-xl text-slate-300" />
               </Button>
               <div className="mb-8 xl:mb-0">
                 <Social
-                containerStyles="flex gap-6"
-                 iconStyles="w-9 h-9 border-blue-600 rounded-full flex justify-center items-center text-blue-600
-                text-base hover:bg-blue-600 hover:text-white hover:transition-all duration-500"/>
+                  containerStyles="flex gap-6"
+                  iconStyles="w-9 h-9 border border-gray-700 rounded-full flex justify-center items-center text-slate-300 text-base hover:bg-blue-700 hover:text-white transition-all duration-500"
+                />
               </div>
             </div>
           </div>
@@ -38,9 +40,9 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Stats/>
+      <Stats />
     </section>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

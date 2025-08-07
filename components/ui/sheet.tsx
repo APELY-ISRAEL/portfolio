@@ -60,11 +60,13 @@ const SheetContent = React.forwardRef<
     <SheetOverlay />
     <SheetPrimitive.Content
       ref={ref}
-      className={cn(sheetVariants({ side }), className)}
+      className={cn(sheetVariants({ side }), 
+       "bg-slate-900 text-slate-100",
+       className)}
       {...props}
     >
       <SheetPrimitive.Close className="absolute right-8 top-8 transition-opacity outline-none">
-        <IoMdClose className="text-3xl text-black" />
+        <IoMdClose className="text-3xl text-gray-400 hover:text-slate-100 cursor-pointer" />
         <span className="sr-only">Close</span>
       </SheetPrimitive.Close>
       {children}
@@ -107,7 +109,7 @@ const SheetTitle = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <SheetPrimitive.Title
     ref={ref}
-    className={cn("text-lg font-semibold text-foreground", className)}
+    className={cn("text-lg font-semibold text-slate-100", className)}
     {...props}
   />
 ))
@@ -119,7 +121,7 @@ const SheetDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <SheetPrimitive.Description
     ref={ref}
-    className={cn("text-sm text-muted-foreground", className)}
+    className={cn("text-sm text-gray-400", className)}
     {...props}
   />
 ))

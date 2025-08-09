@@ -23,9 +23,9 @@ export default function ThemeToggle() {
       className="p-2 rounded border border-gray-500 hover:border-blue-600 transition-colors"
     >
       {isLight ? (
-        <FaMoon className="text-yellow-100 w-6 h-6" />
+        <FaMoon className="text-slate-700 w-6 h-6" />
       ) : (
-        <FaSun className="text-yellow-100 w-6 h-6" />
+        <FaSun className="text-slate-300 w-6 h-6" />
       )}
     </button>
   );

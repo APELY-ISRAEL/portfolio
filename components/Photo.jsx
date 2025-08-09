@@ -21,12 +21,12 @@ const Photo = () => {
                     }}
                     className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px]  absolute" >
                     <Image
-                        src="/assets/Photo.png"
+                        src="/assets/photos.png"
                         priority
                         quality={100}
                         fill
                         alt=""
-                        className="object-contain"
+                        className="object-contain rounded-b-full"
                     />
                 </motion.div>
 
@@ -40,7 +40,7 @@ const Photo = () => {
                         cx="253"
                         cy="253"
                         r="250"
-                        stroke="#3b82f6"
+                        stroke="#f1f5f9"
                         strokeWidth="4" 
                         strokeLinecap="round"
                         strokeLinejoin="round"

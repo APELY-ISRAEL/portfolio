@@ -26,7 +26,7 @@ const info = [
   {
     icon: <FaEnvelope />,
     title: "Email",
-    description: "yourmail@example.com",
+    description: "israelapely@gmail.com",
   },
   {
     icon: <FaMapMarkerAlt />,
@@ -51,9 +51,10 @@ const Contact = () => {
             <form className="flex flex-col gap-6 p-10 bg-[#27272c] border border-gray-700 rounded-xl">
               <h3 className="text-4xl text-slate-100">Let's work together</h3>
               <p className="text-gray-400">
-                Lorem ipsum dolor sit amet, conseca maxime aperiam
-                consequuntur, obcaecati assumenda aliquid. Fugit, harum, error
-                culpa exercitationem temporibus qia ipsam, atque sunt?
+                I'm excited to collaborate on innovative projects and help bring your ideas to life.
+                Whether you have a question, want to discuss a project, or just want to say hello,
+                feel free to reach out.
+                Let's create something amazing together!
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Input
@@ -80,19 +81,22 @@ const Contact = () => {
 
               <Select>
                 <SelectTrigger
-                   class="border border-gray-600 focus:border-blue-600 focus:outline-none rounded-lg px-4 py-2 w-full"
+                  class="border border-gray-600 focus:border-blue-600 focus:outline-none rounded-lg px-4 py-2 w-full"
                 >
-                  <SelectValue placeholder="Select a service" />
+                  <SelectValue placeholder="Select a service"className="h-5 text-sm"/>
                 </SelectTrigger>
 
-                <SelectContent className="bg-black/90 border border-gray-700 text-slate-100">
+                <SelectContent className="bg-black border border-gray-700 text-slate-100">
                   <SelectGroup>
                     <SelectLabel className="text-gray-400">
                       Select a service
                     </SelectLabel>
-                    <SelectItem value="web">Web Dev</SelectItem>
-                    <SelectItem value="web ui">Web UI</SelectItem>
-                    <SelectItem value="web dev">Web Logo</SelectItem>
+                    <SelectItem value="web-development">Web Development</SelectItem>
+                    <SelectItem value="api-development">API Development and Integration</SelectItem>
+                    <SelectItem value="maintenance-support">Maintenance & Technical Support</SelectItem>
+                    <SelectItem value="seo-performance">SEO & Performance Optimization</SelectItem>
+                    <SelectItem value="mobile-development">Mobile Development (Coming Soon)</SelectItem>
+                    <SelectItem value="blockchain-development">Blockchain Development (Coming Soon)</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>

@@ -24,3 +24,30 @@
   }
 }
  
+
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Thème clair */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #0f172a; /* slate-900 */
+}
+
+/* Thème sombre (activé avec la classe "dark" par next-themes) */
+.dark {
+  --bg-color: #0f172a; /* slate-900 */
+  --text-color: #f1f5f9; /* slate-100 */
+}
+
+/* Utilise les variables pour tout le site */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Supprime le clignotement au chargement du thème */
+/* [data-theme="light"], [data-theme="dark"] {
+  transition: none !important;
+} */

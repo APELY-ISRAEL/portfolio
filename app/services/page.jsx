@@ -5,32 +5,46 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 const services = [
-  {
+   {
     num: "01",
     title: "Web Development",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, possimus! Quis aliquam omnis incidunt at illo suscipit ullam ipsum esse. Placeat quidem iure rerum optio! Ipsum iusto minima nesciunt earum.",
+      "Designing and building high-performance, responsive websites using modern technologies to ensure a smooth user experience across all browsers and desktop devices.",
     href: "",
   },
   {
     num: "02",
-    title: "UI/UX Design",
+    title: "API Development and Integration",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, possimus! Quis aliquam omnis incidunt at illo suscipit ullam ipsum esse. Placeat quidem iure rerum optio! Ipsum iusto minima nesciunt earum.",
+      "Designing and implementing robust, secure APIs to ensure seamless communication between various applications and services. Integrating third-party solutions to optimize processes and enhance system connectivity",
     href: "",
   },
   {
     num: "03",
-    title: "Logo Design",
+    title: "Maintenance & Technical Support",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, possimus! Quis aliquam omnis incidunt at illo suscipit ullam ipsum esse. Placeat quidem iure rerum optio! Ipsum iusto minima nesciunt earum.",
+      "Provide ongoing maintenance for applications and websites to ensure smooth operation, fix bugs, apply security updates, and enhance features according to evolving user needs.",
     href: "",
   },
   {
     num: "04",
-    title: "SEO",
+    title: "SEO & Performance Optimization",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, possimus! Quis aliquam omnis incidunt at illo suscipit ullam ipsum esse. Placeat quidem iure rerum optio! Ipsum iusto minima nesciunt earum.",
+      "Enhancing natural search ranking through technical optimizations: loading speed, site structure, meta tags, optimized images, and content organization. Goal: better positioning in search engines and faster navigation.",
+    href: "",
+  },
+  {
+    num: "05",
+   title: "Mobile Development (Coming Soon)",
+    description:
+      "Currently learning and developing skills to build native and cross-platform mobile applications that offer seamless performance and user-friendly interfaces.",
+    href: "",
+  },
+   {
+    num: "06",
+    title: "Blockchain Development (Coming Soon)",
+    description:
+      "Currently learning, exploring, and developing decentralized applications (dApps), smart contracts, and blockchain-based solutions to enhance transparency, security, and innovation in digital services.",
     href: "",
   },
 ];

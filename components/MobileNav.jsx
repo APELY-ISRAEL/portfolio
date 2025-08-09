@@ -4,6 +4,7 @@ import { usePathname } from 'next/navigation';
 import Link from "next/link";
 import { CiMenuFries } from 'react-icons/ci';
 import ThemeToggle from '@/components/ui/theme-toggle';
+import LanguageToggle from '@/components/ui/LanguageToggle'
 
 const links = [
   { name: "home", path: "/" },
@@ -22,11 +23,10 @@ const MobileNav = () => {
         <CiMenuFries className="text-[32px] text-slate-100" />
       </SheetTrigger>
       <SheetContent className="flex flex-col">
-        <div className="mt-20 mb-20 text-center text-2xl text-gray-100">
-          logo
+        <div className="mt-16 mb-16 text-center text-2xl text-gray-100">
           <Link href="/">
             <h1 className="text-4xl font-semibold">
-              Isra <span className="text-amber-100">.</span>
+              I<span className="text-amber-100">.A</span>
             </h1>
           </Link>
           
@@ -49,6 +49,7 @@ const MobileNav = () => {
               {link.name}
             </Link>
           ))}
+           <LanguageToggle />
         </nav>
       </SheetContent>
     </Sheet>

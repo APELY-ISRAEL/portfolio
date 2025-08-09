@@ -2,6 +2,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ThemeToggle from '@/components/ui/theme-toggle';
+import { useTranslation } from 'react-i18next';
+
 
 const links = [
   { name: "home", path: "/" },
@@ -12,6 +14,7 @@ const links = [
 ];
 
 const Nav = () => {
+ 
   const pathname = usePathname();
 
   return (
@@ -33,6 +36,7 @@ const Nav = () => {
           {link.name}
         </Link>
       ))}
+
     </nav>
   );
 };

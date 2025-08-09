@@ -15,18 +15,22 @@ const Home = () => {
               Hello I'm <br /> <span className="text-amber-100">Israel APELY</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-slate-100">
-              I excel at crafting elegant digital experiences and I am proficient in various 
-              programming languages and technologies.
+              Passionate web and mobile developer with experience in creating innovative solutions using various technologies and managing databases. Currently learning blockchain, with a strong interest in this technology, and seeking opportunities to contribute to exciting projects.
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
+              <a
+                href="/Cv_APELY.pdf" // chemin vers ton CV dans le dossier public
+                download="Cv_APELY.pdf" // nom du fichier téléchargé
+              >
               <Button
                 variant="outline"
                 size="lg"
                 className="uppercase flex items-center gap-2 border border-gray-700 hover:bg-blue-700 hover:text-white transition duration-300"
-              > 
+              >
                 <span className="text-gray-300">Download CV</span>
                 <FiDownload className="text-xl text-slate-300" />
               </Button>
+              </a>
               <div className="mb-8 xl:mb-0">
                 <Social
                   containerStyles="flex gap-6"

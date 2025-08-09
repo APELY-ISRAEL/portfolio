@@ -13,52 +13,80 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 const projects = [
   {
     num: "01",
-    category: "frontend",
-    title: "project 1",
-    description: "lorem ioasdhc ahds",
+    category: "Fullstack",
+    title: "Car Rental Web App",
+    description: "Development of a car rental web application with management of vehicles, clients, and bookings through both admin and client interfaces.",
     stack: [
-      { name: "Html 5" }, { name: "Css3" }, { name: "Javascript" }],
-    image: "/assets/work/thumb1.png",
+      { name: "PHP" }, { name: "Laravel" }, { name: "Tailwind CSS" }
+    ],
+    image: "/assets/work/ports.png",
     live: "",
-    github: "",
-  },
-
-  {
-    num: "01",
-    category: "frontend",
-    title: "project 1",
-    description: "lorem ioasdhc ahds",
-    stack: [
-      { name: "Html 5" }, { name: "Css3" }, { name: "Javascript" }],
-    image: "/assets/work/thumb1.png",
-    live: "",
-    github: "",
+    github: "https://github.com/APELY-ISRAEL?tab=repositories",
   },
 
   {
     num: "02",
-    category: "Backend",
-    title: "project 2",
-    description: "lorem ioasdhc as",
+    category: "Fullstack",
+    title: "Blog Platform (Group Project)",
+    description: "Flexible platform for content publishing, reader interaction, and audience growth, developed as a group project.",
     stack: [
-      { name: "Nextjs" }, { name: "Tailwind.css" }, { name: "Node.js" }],
-    image: "/assets/work/thumb2.png",
+      { name: "Python" }, { name: "Django" }, { name: "PostgreSQL" }
+    ],
+    image: "/assets/work/default.png",
+    live: "",
+    github: "",
+  },
+  {
+    num: "03",
+    category: "Fullstack",
+    title: "QR Code Voting App",
+    description: "Innovative application allowing users to scan QR codes to vote anonymously, featuring a secure interface and real-time statistics.",
+    stack: [
+      { name: "React" }, { name: "Next.js" }, { name: "Shadcn" }, { name: "Prisma" }
+    ],
+    image: "/assets/work/rate-me.png",
+    live: "https://rate-me-web-app-six.vercel.app/",
+    github: "https://github.com/APELY-ISRAEL/RateMe_Web_app",
+  },
+
+  {
+    num: "04",
+    category: "Fullstack",
+    title: "Library Management System",
+    description: "Application de gestion de bibliothèque scolaire pour le suivi des emprunts et organisation des documents, améliorant l'expérience d'apprentissage.",
+    stack: [
+      { name: "Laravel" }, { name: "MySQL" }, { name: "Bootstrap" }
+    ],
+    image: "/assets/work/biblio.png",
+    live: "",
+    github: "",
+  },
+  {
+    num: "10",
+    category: "Fullstack",
+    title: "Car Stock Management Website",
+    description: "Design and development of a car stock management website to improve tracking and sales.",
+    stack: [
+      { name: "PHP" }, { name: "Laravel" }, { name: "MySQL" }
+    ],
+    image: "/assets/work/client.png",
     live: "",
     github: "",
   },
 
   {
-    num: "03",
-    category: "Fullsatck",
-    title: "project 3",
-    description: "lorem ioasdhc",
+    num: "11",
+    category: "Blockchain",
+    title: "Identity Authentication System via Blockchain (Group Project)",
+    description: "Projet de groupe visant à créer un système d'authentification d'identité sécurisé utilisant la technologie blockchain.",
     stack: [
-      { name: "Nextjs" }, { name: "Tailwind.css" }, { name: "Node.js" }],
-    image: "/assets/work/thumb3.png",
+      { name: "Solidity" }, { name: "Ethereum" }, { name: "React" }
+    ],
+    image: "/assets/work/default.png",
     live: "",
     github: "",
-  }
-]
+  },
+];
 
 const Work = () => {
   const [project, setProject] = useState(projects[0]);
@@ -94,7 +122,7 @@ const Work = () => {
                 {project.category} project
               </h2>
 
-              <p className="text-gray-400">
+              <p className="text-gray-200">
                 {project.description}
               </p>
 

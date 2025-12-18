@@ -3,53 +3,57 @@
 import { BsArrowDownRight } from "react-icons/bs";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+
+const Services = () => {
+  const { t } = useTranslation();
 
 const services = [
-   {
+  {
     num: "01",
-    title: "Web Development",
+    title: t('services.title1'),
     description:
-      "Designing and building high-performance, responsive websites using modern technologies to ensure a smooth user experience across all browsers and desktop devices.",
+      t('services.description1'),
     href: "",
   },
   {
     num: "02",
-    title: "API Development and Integration",
+    title: t('services.title2'),
     description:
-      "Designing and implementing robust, secure APIs to ensure seamless communication between various applications and services. Integrating third-party solutions to optimize processes and enhance system connectivity",
+      t('services.description2'),
     href: "",
   },
   {
     num: "03",
-    title: "Maintenance & Technical Support",
+    title: t('services.title3'),
     description:
-      "Provide ongoing maintenance for applications and websites to ensure smooth operation, fix bugs, apply security updates, and enhance features according to evolving user needs.",
+      t('services.description3'),
     href: "",
   },
   {
     num: "04",
-    title: "SEO & Performance Optimization",
+    title: t('services.title4'),
     description:
-      "Enhancing natural search ranking through technical optimizations: loading speed, site structure, meta tags, optimized images, and content organization. Goal: better positioning in search engines and faster navigation.",
+      t('services.description4'),
     href: "",
   },
   {
     num: "05",
-   title: "Mobile Development (Coming Soon)",
+    title: t('services.title5'),
     description:
-      "Currently learning and developing skills to build native and cross-platform mobile applications that offer seamless performance and user-friendly interfaces.",
+      t('services.description5'),
     href: "",
   },
-   {
+  {
     num: "06",
-    title: "Blockchain Development (Coming Soon)",
+      title: t('services.title6'),
     description:
-      "Currently learning, exploring, and developing decentralized applications (dApps), smart contracts, and blockchain-based solutions to enhance transparency, security, and innovation in digital services.",
+      t('services.description6'),
     href: "",
   },
 ];
 
-const Services = () => {
+
   return (
     <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0 bg-slate-900">
       <div className="container mx-auto">

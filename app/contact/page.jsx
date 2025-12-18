@@ -16,26 +16,31 @@ import {
 
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+
+const Contact = () => {
+
+  const { t } = useTranslation();
 
 const info = [
   {
     icon: <FaPhoneAlt />,
-    title: "Phone",
+    title: t('resume.Phone'),
     description: "+228 93737007",
   },
   {
     icon: <FaEnvelope />,
-    title: "Email",
+    title: t('resume.Email'),
     description: "israelapely@gmail.com",
   },
   {
     icon: <FaMapMarkerAlt />,
-    title: "Address",
+    title: t('contact.Adress'),
     description: "Lomé, Togo",
   },
 ];
 
-const Contact = () => {
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -43,38 +48,35 @@ const Contact = () => {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="py-6"
+      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0 bg-slate-900"
     >
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-[30px]">
           <div className="xl:w-[70%] order-2 xl:order-none">
             <form className="flex flex-col gap-6 p-10 bg-[#27272c] border border-gray-700 rounded-xl">
-              <h3 className="text-4xl text-slate-100">Let's work together</h3>
+              <h3 className="text-4xl text-slate-100">{t('contact.title')}</h3>
               <p className="text-gray-400">
-                I'm excited to collaborate on innovative projects and help bring your ideas to life.
-                Whether you have a question, want to discuss a project, or just want to say hello,
-                feel free to reach out.
-                Let's create something amazing together!
+              {t('contact.description')}
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Input
                   type="firstname"
-                  placeholder="Firstname"
+                  placeholder={t('contact.firstName')}
                   className="bg-black/70 text-slate-100 placeholder:text-gray-400 border border-gray-700"
                 />
                 <Input
                   type="lastname"
-                  placeholder="Lastname"
+                  placeholder={t('contact.lastName')}
                   className="bg-black/70 text-slate-100 placeholder:text-gray-400 border border-gray-700"
                 />
                 <Input
                   type="email"
-                  placeholder="Email address"
+                  placeholder={t('contact.email')}
                   className="bg-black/70 text-slate-100 placeholder:text-gray-400 border border-gray-700"
                 />
                 <Input
                   type="phone"
-                  placeholder="Phone number"
+                  placeholder={t('contact.phone')}
                   className="bg-black/70 text-slate-100 placeholder:text-gray-400 border border-gray-700"
                 />
               </div>
@@ -83,20 +85,20 @@ const Contact = () => {
                 <SelectTrigger
                   class="border border-gray-600 focus:border-blue-600 focus:outline-none rounded-lg px-4 py-2 w-full"
                 >
-                  <SelectValue placeholder="Select a service"className="h-5 text-sm"/>
+                  <SelectValue placeholder={t('contact.selectService')} className="h-5 text-sm" />
                 </SelectTrigger>
 
                 <SelectContent className="bg-black border border-gray-700 text-slate-100">
                   <SelectGroup>
                     <SelectLabel className="text-gray-400">
-                      Select a service
+                    {t('contact.selectService')} 
                     </SelectLabel>
-                    <SelectItem value="web-development">Web Development</SelectItem>
-                    <SelectItem value="api-development">API Development and Integration</SelectItem>
-                    <SelectItem value="maintenance-support">Maintenance & Technical Support</SelectItem>
-                    <SelectItem value="seo-performance">SEO & Performance Optimization</SelectItem>
-                    <SelectItem value="mobile-development">Mobile Development (Coming Soon)</SelectItem>
-                    <SelectItem value="blockchain-development">Blockchain Development (Coming Soon)</SelectItem>
+                    <SelectItem value="web-development">{t('contact.webDevelopment')}</SelectItem>
+                    <SelectItem value="api-development">{t('contact.apiDevelopment')}</SelectItem>
+                    <SelectItem value="maintenance-support">{t('contact.maintenance')}</SelectItem>
+                    <SelectItem value="seo-performance">{t('contact.seo')}</SelectItem>
+                    <SelectItem value="mobile-development">{t('contact.mobile')}</SelectItem>
+                    <SelectItem value="blockchain-development">{t('contact.blockchain')}</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
@@ -105,14 +107,14 @@ const Contact = () => {
 
               <Textarea
                 className="h-[200px] bg-black/70 text-slate-100 placeholder:text-gray-400 border border-gray-700"
-                placeholder="Type your message here"
+                placeholder={t('contact.message')}
               />
 
               <Button
                 size="md"
-                className="max-w-40 bg-blue-600 hover:bg-blue-700 text-white"
+                className="max-w-[40] bg-blue-600 hover:bg-blue-700 text-white "
               >
-                Send message
+               {t('contact.send')}
               </Button>
             </form>
           </div>

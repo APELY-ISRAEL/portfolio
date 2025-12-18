@@ -1,201 +1,171 @@
 "use client";
 
-import { FaHtml5, FaCss3, FaJs, FaJava, FaPhp, FaCode, FaMouse } from "react-icons/fa";
-import { SiTailwindcss, SiAndroidstudio, SiFigma, SiNextdotjs, SiLaravel, SiFlutter, SiDjango, SiSolidity, SiGit, SiMysql, SiPostgresql, SiMongodb, SiPycharm } from "react-icons/si";
+import { FaHtml5, FaCss3, FaJs, FaJava, FaPhp, FaCode, FaReact, FaMouse } from "react-icons/fa";
+import { SiTailwindcss, SiAndroidstudio, SiFigma, SiNextdotjs, SiLaravel, SiDjango, SiSolidity, SiGit, SiMysql, SiPostgresql, SiMongodb, SiPycharm } from "react-icons/si";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
-
-const about = [
-  {
-    title: 'About me',
-    description: "Passionate and dedicated developer with a keen interest in creating innovative digital solutions. Always eager to learn new technologies and improve skills to deliver high-quality projects. Adaptable and proactive, ready to take on new challenges.",
-    info: [
-      { fieldName: "Name", fieldValue: "Israel APELY" },
-      { fieldName: "Phone", fieldValue: "+228 93737007" },
-      { fieldName: "Experience", fieldValue: "2 Years" },
-      { fieldName: "Teams", fieldValue: "israel.01" },
-      { fieldName: "Nationality", fieldValue: "Togolaise" },
-      { fieldName: "Email", fieldValue: "israelapely@gmail.com" },
-      { fieldName: "Freelance", fieldValue: "Available" },
-      { fieldName: "Languages", fieldValue: "French, English" },
-    ]
-  }
-];
-
-const experience = {
-  icon: '/asset/resume/badge.svg',
-  title: 'My experience',
-  description: "Lorem",
-  items: [
-
-    {
-      company: "Personal Project",
-      position: "Car Stock Management Website",
-      duration: "2025",
-      details: "Full design and development of the system."
-    },
-
-    {
-      company: "Génie en Herbe Contest",
-      position: "Coach",
-      duration: "2025",
-      details: "Coaching and preparing school teams."
-    },
-
-    {
-      company: "Personal Project",
-      position: "QR Code Voting Web Application",
-      duration: "2025",
-      details: "Secure and intuitive interface with real-time statistics integration."
-    },
-
-    {
-      company: "IT Club",
-      position: "President",
-      duration: "2024 - 2025",
-      details: "Organized activities and supervised members."
-    },
-
-    {
-      company: "Easy Service",
-      position: "Full Stack Developer",
-      duration: "2025 - present"
-    },
-
-    {
-      company: "Personal Project",
-      position: "School Library Management Application",
-      duration: "2024",
-      details: "Tracking loans, organizing documents, and improving learning experience."
-    },
-
-    {
-      company: "NTFS",
-      position: "IT Internship",
-      duration: "2024",
-      details: "Participation in projects and technical maintenance."
-    },
-
-    {
-      company: "School Committee",
-      position: "Activity Coordinator",
-      duration: "2024",
-      details: "Event organization and project coordination."
-    },
-
-    {
-      company: "Server Configuration",
-      position: "Ubuntu, Apache, PHP & MySQL Installation and Setup",
-      duration: "2024",
-      details: "Deployment environment for web applications."
-    },
-
-    {
-      position: "Group Project - Identity Authentication System via Blockchain",
-      company: "University",
-      duration: "2024",
-      details: "Developed a secure identity authentication platform using blockchain technology, focusing on decentralized verification and data protection."
-    },
-
-    {
-      position: "Group Project - Personal Blog Platform",
-      company: "University",
-      duration: "2023",
-      details: "Designed and implemented a blog system with user authentication, post creation, and comment management features."
-    },
-
-    {
-      company: "Personal Project",
-      position: "Car Rental Web Application Development",
-      duration: "2022",
-      details: "Management of vehicles, clients, and bookings via admin and client interfaces."
-    },
-  ],
-};
-
-const education = {
-  icon: '/asset/resume/badge.svg',
-  title: 'My Education',
-  description: "Academic background and professional journey in software development.",
-  items: [
-    {
-      institution: "IT Consulting Firm EASY SERVICES",
-      degree: "Application Developer",
-      duration: "2025 - Present"
-    },
-
-    {
-      institution: "Notre Dame School of Administration and Management",
-      degree: "Bachelor's Degree in Information Technology Management",
-      duration: "2021 - 2024"
-    },
-
-    {
-      institution: "Chaminade High School of Kara",
-      degree: "High School Diploma - Second Part, Science Series D",
-      duration: "2020 - 2021"
-    },
-
-    {
-      institution: "Chaminade High School of Kara",
-      degree: "High School Diploma - First Part, Science Series D",
-      duration: "2019 - 2020"
-    }
-  ],
-};
-
-const skills = {
-  title: "My skills",
-  description: "Before mastering any framework, I focus on programming fundamentals. Currently, I work with several frameworks and technologies, some of which I am still learning, such as React Native, Flutter, and Solidity.",
-  skillList: [
-    { icon: <FaHtml5 />, name: "HTML5" },
-    { icon: <FaCss3 />, name: "CSS3" },
-    { icon: <SiTailwindcss />, name: "TailwindCss" },
-    { icon: <FaJs />, name: "JavaScript" },
-    { icon: <FaJava />, name: "Java" },
-    { icon: <FaPhp />, name: "PHP" },
-
-    { icon: <SiFigma />, name: 'figma' },
-    { icon: <SiDjango />, name: "Django" },
-    { icon: <SiLaravel />, name: "Laravel" },
-    { icon: <SiNextdotjs />, name: "Next.js" },
-
-    // En cours d'apprentissage
-    { icon: <SiSolidity />, name: "Solidity (Blockchain en cours)" },
-    { icon: <SiFlutter />, name: "React Native (en cours)" },
-  ],
-};
-
-const tools = {
-  title: "Tools & Editors",
-  description: "Tools and editors I use daily to code efficiently.",
-  toolslist: [
-    // Remplacer ces lignes :
-    { icon: <FaCode />, name: "Visual Studio Code" },
-    { icon: <FaMouse />, name: "Cursor" },
-    { icon: <SiPycharm />, name: "PyCharm" },
-    { icon: <SiAndroidstudio />, name: "Android Studio" },
-    { icon: <SiGit />, name: "Git" },
-  ],
-};
-
-const databases = {
-  title: "Databases",
-  description: "Databases I work with or learn.",
-  databaselist: [
-    { icon: <SiMysql />, name: "MySQL" },
-    { icon: <SiPostgresql />, name: "PostgreSQL" },
-    { icon: <SiMongodb />, name: "MongoDB" },
-  ],
-};
-
-
-
-
+import { useTranslation } from 'react-i18next';
 
 const Resume = () => {
+  const { t } = useTranslation();
+  const about = [
+    {
+      title: t('resume.title6'),
+      description: "Passionate and dedicated developer with a keen interest in creating innovative digital solutions. Always eager to learn new technologies and improve skills to deliver high-quality projects. Adaptable and proactive, ready to take on new challenges.",
+      info: [
+        { fieldName: t('resume.Name'), fieldValue: "Israel APELY" },
+        { fieldName: t('resume.Phone'), fieldValue: "+228 93737007" },
+        { fieldName: t('resume.Experience'), fieldValue: "2 Years" },
+        { fieldName: t('resume.Teams'), fieldValue: "israel.01" },
+        { fieldName: t('resume.Nationality'), fieldValue: "Togolaise" },
+        { fieldName: t('resume.Email'), fieldValue: "israelapely@gmail.com" },
+        { fieldName: t('resume.Freelance'), fieldValue: "Available" },
+        { fieldName: t('resume.Languages'), fieldValue: "French, English" },
+      ]
+    }
+  ];
+
+  const experience = {
+    icon: '/asset/resume/badge.svg',
+    title: t('resume.title1'),
+    description: t('resume.experience'),
+    items: [
+
+      {
+        company: t('resume.exp1_title'),
+        position: t('resume.exp1_desc'),
+        duration: "2025",
+        details: t('resume.exp1_desc'),
+      },
+
+      {
+        company: t('resume.exp2_title'),
+        position: t('resume.exp2_desc'),
+        duration: "2025",
+        details: t('resume.exp2_desc'),
+      },
+      {
+        company: t('resume.exp4_title'),
+        position: t('resume.exp4_desc'),
+        duration: "2025",
+        details: t('resume.exp4_desc'),
+      },
+
+      {
+        company: t('resume.exp3_title'),
+        position: t('resume.exp3_desc'),
+        duration: "2024",
+        details: t('resume.exp3_desc'),
+      },
+
+
+
+      {
+        position: t('resume.exp5_title'),
+        company: t('resume.exp5_desc'),
+        duration: "2024",
+        details: t('resume.exp5_desc'),
+      },
+
+      {
+        position: t('resume.exp6_title'),
+        company: t('resume.exp6_desc'),
+        duration: "2023",
+        details: t('resume.exp6_desc'),
+      },
+
+      {
+        company: t('resume.exp7_title'),
+        position: t('resume.exp7_desc'),
+        duration: "2022",
+        details: t('resume.exp7_desc'),
+      },
+    ],
+  };
+
+  const education = {
+    icon: '/asset/resume/badge.svg',
+    title: t('resume.title2'),
+    description: t('resume.summary'),
+    items: [
+      {
+        institution: t('resume.educ1'),
+        degree: t('resume.educ2'),
+        duration: "2025 - Present"
+      },
+
+      {
+        institution: t('resume.educ3'),
+        degree: t('resume.educ4'),
+        duration: "2021 - 2024"
+      },
+
+      {
+        institution: t('resume.educ5'),
+        degree: t('resume.educ6'),
+        duration: "2020 - 2021"
+      },
+
+      {
+        institution: t('resume.educ5'),
+        degree: t('resume.educ8'),
+        duration: "2019 - 2020"
+      }
+    ],
+  };
+
+  const skills = {
+    title: t('resume.title3'),
+    description: t('resume.desc3'),
+    skillList: [
+      { icon: <FaHtml5 />, name: "HTML5" },
+      { icon: <FaCss3 />, name: "CSS3" },
+      { icon: <SiTailwindcss />, name: "TailwindCss" },
+      { icon: <FaJs />, name: "JavaScript" },
+      { icon: <FaJava />, name: "Java" },
+      { icon: <FaPhp />, name: "PHP" },
+
+      { icon: <SiFigma />, name: 'figma' },
+      { icon: <SiDjango />, name: "Django" },
+      { icon: <SiLaravel />, name: "Laravel" },
+      { icon: <SiNextdotjs />, name: "Next.js" },
+
+      // En cours d'apprentissage
+      { icon: <SiSolidity />, name: t('resume.skill11') },
+      { icon: <FaReact />, name: t('resume.skill12') },
+    ],
+  };
+
+  const tools = {
+    title: t('resume.title4'),
+    description: t('resume.desc4'),
+    toolslist: [
+      // Remplacer ces lignes :
+      { icon: <FaCode />, name: "Visual Studio Code" },
+      { icon: <FaMouse />, name: "Cursor" },
+      { icon: <SiPycharm />, name: "PyCharm" },
+      { icon: <SiAndroidstudio />, name: "Android Studio" },
+      { icon: <SiGit />, name: "Git" },
+    ],
+  };
+
+  const databases = {
+    title: t('resume.title5'),
+    description: t('resume.desc5'),
+    databaselist: [
+      { icon: <SiMysql />, name: "MySQL" },
+      { icon: <SiPostgresql />, name: "PostgreSQL" },
+      { icon: <SiMongodb />, name: "MongoDB" },
+    ],
+  };
+
+
+
+
+
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -208,12 +178,12 @@ const Resume = () => {
       <div className="container mx-auto text-slate-100">
         <Tabs defaultValue="experience" className="flex flex-col xl:flex-row gap-[60px]">
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-            <TabsTrigger value="experience">Experience</TabsTrigger>
-            <TabsTrigger value="education">Education</TabsTrigger>
-            <TabsTrigger value="skills">Skills</TabsTrigger>
-            <TabsTrigger value="tools">Tools & Editor</TabsTrigger>
-            <TabsTrigger value="databases">Databases</TabsTrigger>
-            <TabsTrigger value="about">About me</TabsTrigger>
+            <TabsTrigger value="experience">{t('resume.tab1')}</TabsTrigger>
+            <TabsTrigger value="education">{t('resume.tab2')}</TabsTrigger>
+            <TabsTrigger value="skills">{t('resume.tab3')}</TabsTrigger>
+            <TabsTrigger value="tools">{t('resume.tab4')}</TabsTrigger>
+            <TabsTrigger value="databases">{t('resume.tab5')}</TabsTrigger>
+            <TabsTrigger value="about">{t('resume.tab6')}</TabsTrigger>
           </TabsList>
 
           <div className="min-h-[70vh] w-full">
@@ -280,7 +250,7 @@ const Resume = () => {
                             </div>
                           </TooltipTrigger>
                           <TooltipContent>
-                            <p className="capitalize">{skill.name}</p>
+                            <p className="capitalize text-white">{skill.name}</p>
                           </TooltipContent>
                         </Tooltip>
                       </TooltipProvider>
@@ -307,7 +277,7 @@ const Resume = () => {
                             </div>
                           </TooltipTrigger>
                           <TooltipContent>
-                            <p className="capitalize">{tl.name}</p>
+                            <p className="capitalize text-white">{tl.name}</p>
                           </TooltipContent>
                         </Tooltip>
                       </TooltipProvider>
@@ -336,7 +306,7 @@ const Resume = () => {
                             </div>
                           </TooltipTrigger>
                           <TooltipContent>
-                            <p className="capitalize">{db.name}</p>
+                            <p className="capitalize text-white">{db.name}</p>
                           </TooltipContent>
                         </Tooltip>
                       </TooltipProvider>

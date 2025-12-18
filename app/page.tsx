@@ -1,21 +1,26 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 import Social from "@/components/Social";
 import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
+
+  const { t } = useTranslation();
   return (
-    <section className="h-full bg-slate-900 text-slate-100">
+    <section className="conatiner h-full bg-slate-900 text-slate-100">
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl text-gray-400">Software Developer</span>
-            <h1 className="h1 mb-6">
-              Hello I'm <br /> <span className="text-amber-100">Israel APELY</span>
+            <span className="text-xl text-gray-400">{t('home.title')}</span>
+            <h1 className="h1 mb-6 text-[4.3rem]">
+            {t('home.greeting')}<br /><span className="text-amber-100">Israel APELY</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-slate-100">
-              Passionate web and mobile developer with experience in creating innovative solutions using various technologies and managing databases. Currently learning blockchain, with a strong interest in this technology, and seeking opportunities to contribute to exciting projects.
+            {t('home.description')}
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <a
@@ -27,7 +32,7 @@ const Home = () => {
                 size="lg"
                 className="uppercase flex items-center gap-2 border border-gray-700 hover:bg-blue-700 hover:text-white transition duration-300"
               >
-                <span className="text-gray-300">Download CV</span>
+                <span className="text-gray-300"> {t('home.cta')}</span>
                 <FiDownload className="text-xl text-slate-300" />
               </Button>
               </a>

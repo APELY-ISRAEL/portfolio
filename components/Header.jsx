@@ -1,10 +1,13 @@
+"use client";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import Nav from "./Nav";
 import MobileNav from "./MobileNav";
-import LanguageToggle from '@/components/ui/LanguageToggle'
+import LanguageSwitcher from "./selects/LanguageSwitcher";
+import { useTranslation } from "react-i18next";
 
 export const Header = () => {
+  const { t } = useTranslation();
   return (
     <header className="py-8 xl:py-12 bg-slate-900 text-slate-100">
       <div className="container mx-auto flex justify-between items-center">
@@ -18,10 +21,11 @@ export const Header = () => {
           <Nav />
           <Link href="/contact">
             <Button className="bg-blue-600 hover:bg-blue-700 text-white">
-              Hire me
+              {t('navbar.hire_me')}
             </Button>
           </Link>
-            <LanguageToggle />
+          {/* <LanguageToggle /> */}
+          <LanguageSwitcher />
         </div>
 
         <div className="xl:hidden">

@@ -4,7 +4,7 @@ import { usePathname } from 'next/navigation';
 import Link from "next/link";
 import { CiMenuFries } from 'react-icons/ci';
 import ThemeToggle from '@/components/ui/theme-toggle';
-import LanguageToggle from '@/components/ui/LanguageToggle'
+import LanguageSwitcher from "./selects/LanguageSwitcher";
 
 const links = [
   { name: "home", path: "/" },
@@ -49,7 +49,7 @@ const MobileNav = () => {
               {link.name}
             </Link>
           ))}
-           <LanguageToggle />
+           <LanguageSwitcher />
         </nav>
       </SheetContent>
     </Sheet>

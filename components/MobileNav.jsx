@@ -3,18 +3,19 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { usePathname } from 'next/navigation';
 import Link from "next/link";
 import { CiMenuFries } from 'react-icons/ci';
-import ThemeToggle from '@/components/ui/theme-toggle';
 import LanguageSwitcher from "./selects/LanguageSwitcher";
-
-const links = [
-  { name: "home", path: "/" },
-  { name: "services", path: "/services" },
-  { name: "resume", path: "/resume" },
-  { name: "work", path: "/work" },
-  { name: "contact", path: "/contact" }
-];
+import { useTranslation } from 'react-i18next';
 
 const MobileNav = () => {
+  const { t } = useTranslation();
+  const links = [
+    { name: t('navbar.home'), path: "/" },
+    { name: t('navbar.services'), path: "/services" },
+    { name: t('navbar.resume'), path: "/resume" },
+    { name: t('navbar.work'), path: "/work" },
+    { name: t('navbar.contact'), path: "/contact" },
+  ];
+
   const pathname = usePathname();
 
   return (
@@ -29,19 +30,17 @@ const MobileNav = () => {
               I<span className="text-amber-100">.A</span>
             </h1>
           </Link>
-          
+
         </div>
         <nav className="flex flex-col justify-center items-center gap-7">
-           <ThemeToggle />
           {links.map((link, index) => (
             <Link
               href={link.path}
               key={index}
               className={`
-                ${
-                  link.path === pathname
-                    ? "text-blue-600 border-b-2 border-blue-600"
-                    : "text-slate-100"
+                ${link.path === pathname
+                  ? "text-blue-600 border-b-2 border-blue-600"
+                  : "text-slate-100"
                 }
                 text-xl capitalize hover:text-blue-600 transition-all
               `}
@@ -49,7 +48,7 @@ const MobileNav = () => {
               {link.name}
             </Link>
           ))}
-           <LanguageSwitcher />
+          <LanguageSwitcher />
         </nav>
       </SheetContent>
     </Sheet>
